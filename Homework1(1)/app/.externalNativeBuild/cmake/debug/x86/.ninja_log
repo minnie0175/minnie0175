@@ -9,3 +9,7 @@
 6	2110	0	CMakeFiles/native-lib.dir/src/main/cpp/camera.cpp.o	3b722e81bedb49b5
 17	2180	0	CMakeFiles/native-lib.dir/src/main/cpp/scene.cpp.o	a4b5fd273ee87966
 2180	2252	0	../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so	cede97d4297f50b3
+2	556	0	CMakeFiles/native-lib.dir/src/main/cpp/scene.cpp.o	a4b5fd273ee87966
+556	742	0	../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so	cede97d4297f50b3
+2	507	0	CMakeFiles/native-lib.dir/src/main/cpp/scene.cpp.o	a4b5fd273ee87966
+507	564	0	../../../../build/intermediates/cmake/debug/obj/x86/libnative-lib.so	cede97d4297f50b3

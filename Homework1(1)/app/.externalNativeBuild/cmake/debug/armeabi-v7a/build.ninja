@@ -37,7 +37,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/main.cpp.o: CXX_COMPILER__native-li
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\main.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\main.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\main.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/asset.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/asset.cpp
@@ -45,7 +45,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/asset.cpp.o: CXX_COMPILER__native-l
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\asset.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\asset.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\asset.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/scene.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/scene.cpp
@@ -53,7 +53,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/scene.cpp.o: CXX_COMPILER__native-l
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\scene.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\scene.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\scene.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/program.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/program.cpp
@@ -61,7 +61,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/program.cpp.o: CXX_COMPILER__native
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\program.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\program.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\program.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/shader.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/shader.cpp
@@ -69,7 +69,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/shader.cpp.o: CXX_COMPILER__native-
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\shader.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\shader.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\shader.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/camera.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/camera.cpp
@@ -77,7 +77,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/camera.cpp.o: CXX_COMPILER__native-
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\camera.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\camera.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\camera.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/light.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/light.cpp
@@ -85,7 +85,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/light.cpp.o: CXX_COMPILER__native-l
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\light.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\light.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\light.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/object.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/object.cpp
@@ -93,7 +93,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/object.cpp.o: CXX_COMPILER__native-
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\object.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\object.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\object.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 build CMakeFiles/native-lib.dir/src/main/cpp/material.cpp.o: CXX_COMPILER__native-lib ../../../../src/main/cpp/material.cpp
@@ -101,7 +101,7 @@ build CMakeFiles/native-lib.dir/src/main/cpp/material.cpp.o: CXX_COMPILER__nativ
   DEP_FILE = CMakeFiles\native-lib.dir\src\main\cpp\material.cpp.o.d
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mfpu=vfpv3-d16 -fno-addrsig -march=armv7-a -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -stdlib=libc++ -std=c++11 -O0 -fno-limit-debug-info  -fPIC
   INCLUDES = -I../../../../src/main/cpp/include
-  IN_ABS = C:\Users\minnie\Desktop\Homework1(1)\app\src\main\cpp\material.cpp
+  IN_ABS = "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\src\main\cpp\material.cpp"
   OBJECT_DIR = CMakeFiles\native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles\native-lib.dir\src\main\cpp
 
@@ -128,7 +128,7 @@ build ../../../../build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\minnie\Desktop\Homework1(1)\app\.externalNativeBuild\cmake\debug\armeabi-v7a && C:\Users\minnie\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\.externalNativeBuild\cmake\debug\armeabi-v7a" && C:\Users\minnie\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -137,7 +137,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\Users\minnie\Desktop\Homework1(1)\app\.externalNativeBuild\cmake\debug\armeabi-v7a && C:\Users\minnie\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -HC:\Users\minnie\Desktop\Homework1(1)\app -BC:\Users\minnie\Desktop\Homework1(1)\app\.externalNativeBuild\cmake\debug\armeabi-v7a"
+  COMMAND = cmd.exe /C "cd /D "C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\.externalNativeBuild\cmake\debug\armeabi-v7a" && C:\Users\minnie\AppData\Local\Android\Sdk\cmake\3.6.4111459\bin\cmake.exe -H"C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app" -B"C:\Users\minnie\Desktop\Computer Graphics Assignment\Homework1(1)\app\.externalNativeBuild\cmake\debug\armeabi-v7a""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
