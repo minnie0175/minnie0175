@@ -1,0 +1,48 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Shops",
+            "TargetField": [ "SeedShop", "Items" ],
+            "Entries":{ 
+                "JihyunSomin.SeedsAllSeasons_AddSeeds":{
+                    "Id": "JihyunSomin.SeedsAllSeasons_AddSeeds", 
+                    "ItemId": "ALL_ITEMS (O) @requirePrice",
+                    "PerItemCondition": "ITEM_ID Target (O)499 (O)489 (O)494 (O)481 (O)491 (O)802 (O)474 (O)487 (O)493 (O)488 (O)425 (O)476 (O)429 (O)477 (O)479 (O)472 (O)482 (O)833 (O)453 (O)475 (O)490 (O)484 (O)485 (O)478 (O)455 (O)486 (O)431 (O)480 (O)483 (O)492 (O)273 (O)299",
+                    "IgnoreShopPriceModifiers": true,
+                    "AvoidRepeat": true
+                },
+                "JihyunSomin.SeedsAllSeasons_AddHyperSpeedGrow":{
+                    "Id": "JihyunSomin.SeedsAllSeasons_AddHyperSpeedGrow", 
+                    "ItemId": "ALL_ITEMS (O)",
+                    "Price": 1000,
+                    "PerItemCondition": "ITEM_ID Target (O)919 (O)918",
+                    "IgnoreShopPriceModifiers": true,
+                    "AvoidRepeat": true
+                },
+                "JihyunSomin.SeedsAllSeasons_AddSapling":{
+                    "Id": "JihyunSomin.SeedsAllSeasons_AddSapling", 
+                    "ItemId": "ALL_ITEMS (O)",
+                    "Price": 6000,
+                    "PerItemCondition": "ITEM_ID Target (O)69 (O)835",
+                    "IgnoreShopPriceModifiers": true,
+                    "AvoidRepeat": true
+                },
+                "JihyunSomin.SeedsAllSeasons_AddStrawberrySeeds":{
+                    "Id": "JihyunSomin.SeedsAllSeasons_AddStrawberrySeeds",
+                    "ItemId": "(O)745",
+                    "Price": 100,
+                    "IgnoreShopPriceModifiers": true,
+                    "AvoidRepeat": true
+                }
+            },
+            "MoveEntries": [
+                { "Id": "JihyunSomin.SeedsAllSeasons_AddSeeds", "AfterID": "(O)299" },
+                { "Id": "JihyunSomin.SeedsAllSeasons_AddHyperSpeedGrow", "AfterID": "(O)466" },
+                { "Id": "JihyunSomin.SeedsAllSeasons_AddSapling", "AfterID": "(F)1308" },
+                { "Id": "JihyunSomin.SeedsAllSeasons_AddStrawberrySeeds", "AfterID": "JihyunSomin.SeedsAllSeasons_AddSeeds" }
+            ]
+        }
+    ]
+}

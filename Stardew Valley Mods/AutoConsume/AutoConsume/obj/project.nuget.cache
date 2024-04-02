@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7x1o5CN/PH6Vpx7OZxHxiFtDeX6RmTEFh3mpFafdpNAKxnD43aauNKFalyAeQp58W9TlezsZFQM40JhJbvhGRg==",
+  "success": true,
+  "projectFilePath": "/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/AutoConsume.csproj",
+  "expectedPackageFiles": [
+    "/Users/ryujihyeun/.nuget/packages/pathoschild.stardew.modbuildconfig/4.1.1/pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}

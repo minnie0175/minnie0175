@@ -1,0 +1,17 @@
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/bin/Debug/net6.0/AutoConsume.deps.json
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/bin/Debug/net6.0/AutoConsume.dll
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.csproj.AssemblyReference.cache
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.GeneratedMSBuildEditorConfig.editorconfig
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.AssemblyInfoInputs.cache
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.AssemblyInfo.cs
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.csproj.CoreCompileInputs.cache
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.sourcelink.json
+D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.dll
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/bin/Debug/net6.0/AutoConsume.deps.json
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/bin/Debug/net6.0/AutoConsume.dll
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.csproj.AssemblyReference.cache
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.AssemblyInfoInputs.cache
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.AssemblyInfo.cs
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.csproj.CoreCompileInputs.cache
+/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.dll
