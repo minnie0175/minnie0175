@@ -15,3 +15,11 @@ D:/StardewMods/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoC
 /Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.AssemblyInfo.cs
 /Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.csproj.CoreCompileInputs.cache
 /Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/obj/Debug/net6.0/AutoConsume.dll
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\bin\Debug\net6.0\AutoConsume.deps.json
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\bin\Debug\net6.0\AutoConsume.dll
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\obj\Debug\net6.0\AutoConsume.csproj.AssemblyReference.cache
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\obj\Debug\net6.0\AutoConsume.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\obj\Debug\net6.0\AutoConsume.AssemblyInfoInputs.cache
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\obj\Debug\net6.0\AutoConsume.AssemblyInfo.cs
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\obj\Debug\net6.0\AutoConsume.csproj.CoreCompileInputs.cache
+C:\Users\minnie\Desktop\StardewMods\StardewValley_Mods\AutoConsume\AutoConsume\obj\Debug\net6.0\AutoConsume.dll

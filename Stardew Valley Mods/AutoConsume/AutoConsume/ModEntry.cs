@@ -14,8 +14,9 @@ namespace AutoConsume
     /// <summary>The mod entry point.</summary>
     internal sealed class ModEntry : Mod
     {
-        bool checkHealth = true;
-        bool checkSpeedBuff = true;
+        bool ShouldEat = false;
+        bool ShouldDrink = false;
+
         /*********
         ** Public methods
         *********/
@@ -24,11 +25,10 @@ namespace AutoConsume
         public override void Entry(IModHelper helper)
         {
             helper.Events.Input.ButtonPressed += this.OnButtonPressed;
-            helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
             helper.Events.GameLoop.DayStarted += this.OnDayStarted;
-
+            helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
+            helper.Events.GameLoop.OneSecondUpdateTicked += OnOneSecondUpdateTicked;
         }
-
 
         /*********
         ** Private methods
@@ -41,76 +41,88 @@ namespace AutoConsume
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady)
                 return;
-
             // print button presses to the console window
-            //this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
+            // this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
+        }
+
+        private void OnOneSecondUpdateTicked(object sender, EventArgs e)
+        {
+            // ignore if player hasn't loaded a save yet
+            if (!Context.IsWorldReady) return;
+
+
+            // check Buff
+            if (!Game1.player.hasBuff("drink") && Game1.player.canMove && Game1.timeOfDay < 2400) ShouldDrink = true;
+            else ShouldDrink = false;
+
+            this.Monitor.Log($"CanMove: {Game1.player.canMove}", LogLevel.Debug);
+            this.Monitor.Log($"timeofday: {Game1.timeOfDay}", LogLevel.Debug);
+
+
+            if (ShouldDrink)
+            {
+                DrinkTrippleShotEspresso();
+            }
+
         }
 
         private void OnUpdateTicked(object sender, EventArgs e)
         {
-            EatCheese();
-            DrinkTrippleShotEspresso();
+            // ignore if player hasn't loaded a save yet
+            if (!Context.IsWorldReady) return;
+
+            // check health
+            if (Game1.player.health <= Game1.player.maxHealth * 0.3 && Game1.player.canMove) ShouldEat = true;
+            else ShouldEat = false;
+
+            if (ShouldEat)
+            {
+                EatCheese();
+            }
         }
 
         private void OnDayStarted(object sender, EventArgs e)
         {
             // drink Triple Shot Espresso when the player wakes up
-            const string TSE_ID = "253";
-            Item TSE = new StardewValley.Object(TSE_ID, 1);
-            StardewValley.Object TSEObj = new StardewValley.Object(TSE_ID, 1);
-            Game1.player.eatObject(TSEObj);
-            Game1.player.Items.ReduceId(TSE_ID, 1);
-
+            // ShouldDrink = true;
         }
 
         private void EatCheese()
         {
-            if (Game1.player.health > Game1.player.maxHealth * 0.3) checkHealth = true;
-
-            if (Game1.player.health < Game1.player.maxHealth * 0.3 && checkHealth)
+            // set variables
+            const string Cheese_ID = "424";
+            Item cheese = new StardewValley.Object(Cheese_ID, 1, false, -1, 2);
+            StardewValley.Object cheeseObj = new StardewValley.Object(Cheese_ID, 1, false, -1, 2);
+            // find cheese 
+            int idx = Game1.player.getIndexOfInventoryItem(cheese);
+            // check inventory
+            if (idx >= 0)
             {
-                // set variables
-                const string Cheese_ID = "424";
-                Item cheese = new StardewValley.Object(Cheese_ID, 1, false, -1, 2);
-                StardewValley.Object cheeseObj = new StardewValley.Object(Cheese_ID, 1, false, -1, 2);
-                // find cheese 
-                int idx = Game1.player.getIndexOfInventoryItem(cheese);
-
-                if (idx >= 0)
-                {
-                    checkHealth = false;
-                    Game1.player.eatObject(cheeseObj);
-                    Game1.player.Items.ReduceId(Cheese_ID, 1);
-                }
+                Game1.player.eatObject(cheeseObj);
+                Game1.player.Items.ReduceId(Cheese_ID, 1);
             }
         }
 
         private void DrinkTrippleShotEspresso()
         {
-            // update checkSpeedBuff
-            if (Game1.player.hasBuff("drink"))
+            // set variable
+            const string TSE_ID = "253"; 
+            Item TSE = new StardewValley.Object(TSE_ID, 1);
+            StardewValley.Object TSEObj = new StardewValley.Object(TSE_ID, 1);
+            // find TSE
+            int idx = Game1.player.getIndexOfInventoryItem(TSE);
+            // check inventory
+            if (idx >= 0)
             {
-                if (Game1.player.buffs.AppliedBuffs["drink"].millisecondsDuration < 2000) checkSpeedBuff = true;
+                Game1.player.eatObject(TSEObj);
+                Game1.player.Items.ReduceId(TSE_ID, 1);
             }
 
-            if (Game1.player.IsBusyDoingSomething()) return;
-
-            // check buff id
-            if (!Game1.player.hasBuff("drink") && checkSpeedBuff)
-            {
-                // set variables TrippleShotEspresso = TSE
-                const string TSE_ID = "253";
-                Item TSE = new StardewValley.Object(TSE_ID, 1);
-                StardewValley.Object TSEObj = new StardewValley.Object(TSE_ID, 1);
-
-                // check buff has speed buff
-                if (Game1.player.buffs.Speed == 0 && Game1.player.getIndexOfInventoryItem(TSE) >= 0)
-                {
-                    checkSpeedBuff = false;
-                    Game1.player.eatObject(TSEObj);
-                    Game1.player.Items.ReduceId(TSE_ID, 1);
-                }
-            }
+            // Previous
+            /*
+             * if (Game1.player.IsBusyDoingSomething()) return;
+             * if (Game1.player.buffs.Speed == 0 && Game1.player.getIndexOfInventoryItem(TSE) >= 0)
+             */
         }
 
     }
