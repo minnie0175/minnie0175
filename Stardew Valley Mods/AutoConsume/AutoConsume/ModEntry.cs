@@ -1,21 +1,40 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using StardewModdingAPI;
 using StardewValley.GameData;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
-using StardewValley.Objects;
-using StardewValley.Inventories;
-using StardewValley.Tools;
+using StardewValley.Menus;
 
 namespace AutoConsume
 {
+    // create Class for Keybinding
+    public sealed class ModConfig
+    {
+        public KeybindList OpenMenuKey { get; set; } = KeybindList.Parse("O");
+        public bool AutoHealKey { get; set; }
+        public bool AutoBuffKey { get; set; }
+        public string HealItemID { get; set; } = "424"; // cheese item id
+        public int HealItemQuality { get; set; }
+        public string BuffItemID { get; set; } = "253"; // Triple shot espresso item id
+        public int BuffItemQuality { get; set; }
+        public int BuffStartTime { get; set; }
+        public int BuffEndTime { get; set; }
+    }
+
     /// <summary>The mod entry point.</summary>
     internal sealed class ModEntry : Mod
     {
-        bool ShouldEat = false;
-        bool ShouldDrink = false;
+        bool ShouldHeal = false;
+        bool ShouldBuff = false;
+
+        private ModConfig Config;
+        private List<Item> InventoryItems = new List<Item>();
 
         /*********
         ** Public methods
@@ -24,44 +43,71 @@ namespace AutoConsume
         /// <param name="helper">Provides simplified APIs for writing mods.</param>
         public override void Entry(IModHelper helper)
         {
-            helper.Events.Input.ButtonPressed += this.OnButtonPressed;
-            helper.Events.GameLoop.DayStarted += this.OnDayStarted;
+            this.Config = this.Helper.ReadConfig<ModConfig>();
+
             helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
             helper.Events.GameLoop.OneSecondUpdateTicked += OnOneSecondUpdateTicked;
+            helper.Events.Input.ButtonsChanged += this.OnButtonChanged;
         }
 
+        
         /*********
         ** Private methods
         *********/
         /// <summary>Raised after the player presses a button on the keyboard, controller, or mouse.</summary>
         /// <param name="sender">The event sender.</param>
         /// <param name="e">The event data.</param>
-        private void OnButtonPressed(object sender, ButtonPressedEventArgs e)
+        ///
+        private void OnButtonChanged(object? sender, ButtonsChangedEventArgs e)
+        {
+            if (!Game1.player.canMove) return;
+            if (!Context.IsWorldReady) return;
+
+            if (Config.OpenMenuKey.JustPressed())
+            {
+                // Get Inventroy Items
+                GetInventoryItems();
+
+                // if Auto Consume Menu is Open then close
+                if (Game1.activeClickableMenu is AutoConsumeMenu autoConsumeMenu)
+                {
+                    autoConsumeMenu.exitThisMenu();
+                }
+                else Game1.activeClickableMenu = (IClickableMenu)(object)new AutoConsumeMenu(Config, InventoryItems);
+            }
+        }
+
+        private void GetInventoryItems()
         {
             // ignore if player hasn't loaded a save yet
-            if (!Context.IsWorldReady)
-                return;
-            // print button presses to the console window
-            // this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
+            if (!Context.IsWorldReady) return;
+            // clear list
+            InventoryItems.Clear();
+            // get inventory items that can consume
+            foreach (Item curItem in Game1.player.Items)
+            {
+                if (curItem == null) continue;
+                StardewValley.Object o = new StardewValley.Object(curItem.ItemId, 1);
+                if (o.Edibility > 0) InventoryItems.Add(curItem);
+            }
         }
 
         private void OnOneSecondUpdateTicked(object sender, EventArgs e)
         {
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady) return;
-
-
+            if (!Config.AutoBuffKey) return;
+            if (Game1.activeClickableMenu is AutoConsumeMenu autoConsumeMenu) return;
             // check Buff
-            if (!Game1.player.hasBuff("drink") && Game1.player.canMove && Game1.timeOfDay < 2400) ShouldDrink = true;
-            else ShouldDrink = false;
-
-            this.Monitor.Log($"CanMove: {Game1.player.canMove}", LogLevel.Debug);
-            this.Monitor.Log($"timeofday: {Game1.timeOfDay}", LogLevel.Debug);
-
-
-            if (ShouldDrink)
+            if (!Game1.player.hasBuff("drink") && !Game1.player.hasBuff("food") && Game1.player.canMove && !Game1.IsFading() && Game1.timeOfDay >= Config.BuffStartTime && Game1.timeOfDay < Config.BuffEndTime)
             {
-                DrinkTrippleShotEspresso();
+                ShouldBuff = true;
+            }
+            else ShouldBuff = false;
+
+            if (ShouldBuff)
+            {
+                GoBuff();
             }
 
         }
@@ -70,60 +116,66 @@ namespace AutoConsume
         {
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady) return;
+            if (!Config.AutoHealKey) return;
+            if (Game1.player.health <= 0) return;
+            if (Game1.activeClickableMenu is AutoConsumeMenu autoConsumeMenu) return;
 
             // check health
-            if (Game1.player.health <= Game1.player.maxHealth * 0.3 && Game1.player.canMove) ShouldEat = true;
-            else ShouldEat = false;
+            if (Game1.player.health <= Game1.player.maxHealth * 0.3 && Game1.player.canMove && !Game1.IsFading()) ShouldHeal = true;
+            else ShouldHeal = false;
 
-            if (ShouldEat)
+            if (ShouldHeal)
             {
-                EatCheese();
+                GoHeal();
             }
+
         }
 
-        private void OnDayStarted(object sender, EventArgs e)
-        {
-            // drink Triple Shot Espresso when the player wakes up
-            // ShouldDrink = true;
-        }
-
-        private void EatCheese()
+        private void GoHeal()
         {
             // set variables
-            const string Cheese_ID = "424";
-            Item cheese = new StardewValley.Object(Cheese_ID, 1, false, -1, 2);
-            StardewValley.Object cheeseObj = new StardewValley.Object(Cheese_ID, 1, false, -1, 2);
-            // find cheese 
-            int idx = Game1.player.getIndexOfInventoryItem(cheese);
+            string HealID = Config.HealItemID;
+            int HealQuality = Config.HealItemQuality;
+            StardewValley.Object HealObj = new StardewValley.Object(HealID, 1, false, -1, HealQuality);
+            Item HealItem = HealObj;
+            // find HealItem
+            int HealIdx = Game1.player.getIndexOfInventoryItem(HealObj);
             // check inventory
-            if (idx >= 0)
+            if (HealIdx >= 0)
             {
-                Game1.player.eatObject(cheeseObj);
-                Game1.player.Items.ReduceId(Cheese_ID, 1);
+                Game1.player.eatObject(HealObj);
+                Game1.player.Items.ReduceId(HealID, 1);
+            }
+            else
+            {
+                // If there are no available items in the inventory, then open the menu
+                GetInventoryItems();
+                Game1.activeClickableMenu = (IClickableMenu)(object)new AutoConsumeMenu(Config, InventoryItems);
             }
         }
-
-        private void DrinkTrippleShotEspresso()
+        
+        private void GoBuff()
         {
             // set variable
-            const string TSE_ID = "253"; 
-            Item TSE = new StardewValley.Object(TSE_ID, 1);
-            StardewValley.Object TSEObj = new StardewValley.Object(TSE_ID, 1);
-            // find TSE
-            int idx = Game1.player.getIndexOfInventoryItem(TSE);
+            string BuffID = Config.BuffItemID;
+            int BuffQuality = Config.BuffItemQuality;
+            StardewValley.Object BuffObj = new StardewValley.Object(BuffID, 1, false, -1, BuffQuality);
+            Item BuffItem = BuffObj;
+            // find BuffItem
+            int BuffIdx = Game1.player.getIndexOfInventoryItem(BuffObj);
             // check inventory
-            if (idx >= 0)
+            if (BuffIdx >= 0)
             {
-                Game1.player.eatObject(TSEObj);
-                Game1.player.Items.ReduceId(TSE_ID, 1);
+                Game1.player.eatObject(BuffObj);
+                //Game1.player.removeFirstOfThisItemFromInventory(BuffID);
+                Game1.player.Items.ReduceId(BuffID, 1);
             }
-
-            // Previous
-            /*
-             * if (Game1.player.IsBusyDoingSomething()) return;
-             * if (Game1.player.buffs.Speed == 0 && Game1.player.getIndexOfInventoryItem(TSE) >= 0)
-             */
+            else
+            {
+                // If there are no available items in the inventory, then open the menu
+                GetInventoryItems();
+                Game1.activeClickableMenu = (IClickableMenu)(object)new AutoConsumeMenu(Config, InventoryItems);
+            }
         }
-
     }
 }

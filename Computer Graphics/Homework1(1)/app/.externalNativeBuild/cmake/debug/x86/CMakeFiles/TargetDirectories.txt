@@ -1,3 +1,0 @@
-C:/Users/minnie/Desktop/Computer Graphics Assignment/Homework1(1)/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/native-lib.dir
-C:/Users/minnie/Desktop/Computer Graphics Assignment/Homework1(1)/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/edit_cache.dir
-C:/Users/minnie/Desktop/Computer Graphics Assignment/Homework1(1)/app/.externalNativeBuild/cmake/debug/x86/CMakeFiles/rebuild_cache.dir

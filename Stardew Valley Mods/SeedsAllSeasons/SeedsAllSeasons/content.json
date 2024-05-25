@@ -9,7 +9,7 @@
                 "JihyunSomin.SeedsAllSeasons_AddSeeds":{
                     "Id": "JihyunSomin.SeedsAllSeasons_AddSeeds", 
                     "ItemId": "ALL_ITEMS (O) @requirePrice",
-                    "PerItemCondition": "ITEM_ID Target (O)499 (O)489 (O)494 (O)481 (O)491 (O)802 (O)474 (O)487 (O)493 (O)488 (O)425 (O)476 (O)429 (O)477 (O)479 (O)472 (O)482 (O)833 (O)453 (O)475 (O)490 (O)484 (O)485 (O)478 (O)455 (O)486 (O)431 (O)480 (O)483 (O)492 (O)273 (O)299",
+                    "PerItemCondition": "ITEM_ID Target (O)499 (O)427 (O)489 (O)494 (O)481 (O)491 (O)802 (O)474 (O)487 (O)493 (O)488 (O)425 (O)476 (O)429 (O)477 (O)479 (O)472 (O)482 (O)833 (O)453 (O)475 (O)490 (O)484 (O)485 (O)478 (O)455 (O)486 (O)431 (O)480 (O)483 (O)492 (O)273 (O)299",
                     "IgnoreShopPriceModifiers": true,
                     "AvoidRepeat": true
                 },

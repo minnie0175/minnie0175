@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|d:\\stardewmods\\stardewvalley_mods\\autoconsume\\autoconsume\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|solutionrelative:autoconsume\\manifest.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|d:\\stardewmods\\stardewvalley_mods\\autoconsume\\autoconsume\\autoconsume.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|solutionrelative:autoconsume\\autoconsume.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|d:\\stardewmods\\stardewvalley_mods\\autoconsume\\autoconsume\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|solutionrelative:autoconsume\\modentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|d:\\stardewmods\\stardewvalley_mods\\autoconsume\\autoconsume\\autoconsume.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|solutionrelative:autoconsume\\autoconsume.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|d:\\stardewmods\\stardewvalley_mods\\autoconsume\\autoconsume\\autoconsumemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09C15C87-2AE6-4E87-849E-16223CB9592F}|AutoConsume\\AutoConsume.csproj|solutionrelative:autoconsume\\autoconsumemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AutoConsume",
+              "DocumentMoniker": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\AutoConsume.csproj",
+              "RelativeDocumentMoniker": "AutoConsume\\AutoConsume.csproj",
+              "ToolTip": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\AutoConsume.csproj",
+              "RelativeToolTip": "AutoConsume\\AutoConsume.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-18T08:34:33.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "manifest.json",
+              "DocumentMoniker": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\manifest.json",
+              "RelativeDocumentMoniker": "AutoConsume\\manifest.json",
+              "ToolTip": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\manifest.json",
+              "RelativeToolTip": "AutoConsume\\manifest.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-18T08:24:16.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AutoConsume",
+              "DocumentMoniker": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\AutoConsume.csproj",
+              "RelativeDocumentMoniker": "AutoConsume\\AutoConsume.csproj",
+              "ToolTip": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\AutoConsume.csproj",
+              "RelativeToolTip": "AutoConsume\\AutoConsume.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-18T08:16:48.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "ModEntry.cs",
               "DocumentMoniker": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\ModEntry.cs",
               "RelativeDocumentMoniker": "AutoConsume\\ModEntry.cs",
               "ToolTip": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\ModEntry.cs",
               "RelativeToolTip": "AutoConsume\\ModEntry.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAowHEAAAABAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAkwFIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-01T02:25:42.202Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AutoConsumeMenu.cs",
+              "DocumentMoniker": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\AutoConsumeMenu.cs",
+              "RelativeDocumentMoniker": "AutoConsume\\AutoConsumeMenu.cs",
+              "ToolTip": "D:\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\AutoConsumeMenu.cs",
+              "RelativeToolTip": "AutoConsume\\AutoConsumeMenu.cs",
+              "ViewState": "AQIAABAAAAAAmJmZmZkZwCYAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T04:57:25.971Z"
             }
           ]
         }

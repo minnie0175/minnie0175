@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Ii/IsXJq54JXy2OFJAZtA04mccJKXEc4itzxp4/Oy2ksxPYqAPJ+RL5QyICsE/v04ost/8hbBFNqtBTztZVBWw==",
+  "dgSpecHash": "7x1o5CN/PH6Vpx7OZxHxiFtDeX6RmTEFh3mpFafdpNAKxnD43aauNKFalyAeQp58W9TlezsZFQM40JhJbvhGRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\minnie\\Desktop\\StardewMods\\StardewValley_Mods\\AutoConsume\\AutoConsume\\AutoConsume.csproj",
+  "projectFilePath": "/Users/ryujihyeun/Documents/GitHub/StardewValley_Mods/AutoConsume/AutoConsume/AutoConsume.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\minnie\\.nuget\\packages\\pathoschild.stardew.modbuildconfig\\4.1.1\\pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512"
+    "/Users/ryujihyeun/.nuget/packages/pathoschild.stardew.modbuildconfig/4.1.1/pathoschild.stardew.modbuildconfig.4.1.1.nupkg.sha512"
   ],
   "logs": []
 }
