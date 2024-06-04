@@ -1,25 +1,29 @@
 ﻿<Properties>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="AutoConsume/AutoConsumeMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AutoConsume/ModEntry.cs">
     <Files>
       <File FileName="AutoConsume/config.json" Line="10" Column="1" IsPinned="True" />
-      <File FileName="AutoConsume/AutoConsumeMenu.cs" Line="271" Column="1" IsPinned="True" />
+      <File FileName="AutoConsume/AutoConsumeMenu.cs" Line="185" Column="13" IsPinned="True" />
+      <File FileName="AutoConsume/AutoConsumeOptionsSlider.cs" />
+      <File FileName="AutoConsume/AutoConsumeOptionsElements.cs" />
+      <File FileName="AutoConsume/manifest.json" />
+      <File FileName="AutoConsume/ModEntry.cs" Line="64" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="AutoConsume" expanded="True">
             <Node name="AutoConsume" expanded="True">
-              <Node name="AutoConsumeMenu.cs" selected="True" />
+              <Node name="ModEntry.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

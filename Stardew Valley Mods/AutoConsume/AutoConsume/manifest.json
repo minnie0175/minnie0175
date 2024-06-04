@@ -1,7 +1,7 @@
 ﻿{
   "Name": "AutoConsume",
   "Author": "JihyunSomin",
-  "Version": "1.1.0",
+  "Version": "1.1.1",
   "Description": "When your hp is low, you eat Gold Quality Cheese in your Inventory. When you don't have a speed buff on you, you drink Triple Shot Espresso from your Inventory.",
   "UniqueID": "JihyunSomin.AutoConsume",
   "EntryDll": "AutoConsume.dll",

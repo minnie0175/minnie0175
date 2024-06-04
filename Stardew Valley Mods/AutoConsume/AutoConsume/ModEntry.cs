@@ -32,6 +32,9 @@ namespace AutoConsume
     {
         bool ShouldHeal = false;
         bool ShouldBuff = false;
+        bool buffMessageOn = false;
+        bool healMessageOn = false;
+        string warningMessage = "There are no available items in the inventory";
 
         private ModConfig Config;
         private List<Item> InventoryItems = new List<Item>();
@@ -149,8 +152,10 @@ namespace AutoConsume
             else
             {
                 // If there are no available items in the inventory, then open the menu
-                GetInventoryItems();
-                Game1.activeClickableMenu = (IClickableMenu)(object)new AutoConsumeMenu(Config, InventoryItems);
+                Game1.addHUDMessage(new HUDMessage(warningMessage, 3));
+                Config.AutoHealKey = false;
+                //GetInventoryItems();
+                //Game1.activeClickableMenu = (IClickableMenu)(object)new AutoConsumeMenu(Config, InventoryItems);
             }
         }
         
@@ -167,14 +172,13 @@ namespace AutoConsume
             if (BuffIdx >= 0)
             {
                 Game1.player.eatObject(BuffObj);
-                //Game1.player.removeFirstOfThisItemFromInventory(BuffID);
                 Game1.player.Items.ReduceId(BuffID, 1);
             }
             else
             {
                 // If there are no available items in the inventory, then open the menu
-                GetInventoryItems();
-                Game1.activeClickableMenu = (IClickableMenu)(object)new AutoConsumeMenu(Config, InventoryItems);
+                Game1.addHUDMessage(new HUDMessage(warningMessage, 3));
+                Config.AutoBuffKey = false;
             }
         }
     }
